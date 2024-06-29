@@ -10,22 +10,7 @@ def time_left(target):
     diff = target - now
     return diff
 
-st.markdown(
-    """
-    <style>
-    .timer {
-        font-size: 50px;
-        font-weight: bold;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+st.title("Contador Regressivo")
 
 while True:
     time_remaining = time_left(target_date)
@@ -34,6 +19,6 @@ while True:
     minutes = (seconds % 3600) // 60
     seconds = seconds % 60
 
-    st.markdown(f'<div class="timer">0{days}:{hours}:{minutes}:{seconds}s</div>', unsafe_allow_html=True)
+    st.write(f"Tempo restante: {days} dias, {hours} horas, {minutes} minutos, {seconds} segundos")
     time.sleep(1)
     st.experimental_rerun()
