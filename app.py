@@ -21,4 +21,4 @@ while True:
 
     st.write(f"Tempo restante: {days} dias, {hours} horas, {minutes} minutos, {seconds} segundos")
     time.sleep(1)
-    st.experimental_rerun()
+    st.rerun()
